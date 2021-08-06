@@ -49,21 +49,19 @@ def stats(update, context):
             f'<b>├  🚀 RAM : {memory}%</b>\n' \
             f'<b>├  🗄 DISK : {disk}%</b>\n' \
             f'<b>│</b>\n' \
-            f'<b>╰──「 🚸 @PriiiiyoBOTs 🚸 」</b>'
+            f'<b>╰──「 🚸 @DharsaMirror3Bot 🚸 」</b>'
     update.effective_message.reply_photo(IMAGE_URL, stats, parse_mode=ParseMode.HTML)
 
 
 def start(update, context):
     start_string = f'''
 This bot can mirror all your links to Google drive!
-👲 Modded By: @priiiiyo
+👲 Modded By: Dharsa
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("👤 ᴏᴡɴᴇʀ 👤", "https://t.me/priiiiyo")
-    buttons.buildbutton("💎 ʀᴇᴘᴏ 💎", "https://github.com/priiiiyo/priiiiyo-mirror-bot")
-    buttons.buildbutton("Ⓜ️ ᴍɪʀʀᴏʀ ɢʀᴏᴜᴘ Ⓜ️", "https://t.me/PriiiiyoMirror")
-    buttons.buildbutton("⚙️ ᴘʀɪɪɪɪʏᴏ ʙᴏᴛꜱ ⚙️", "http://t.me/PriiiiyoBOTs")
+    buttons.buildbutton("👤 ᴏᴡɴᴇʀ 👤", "https://t.me/rsdwsubs")
+    buttons.buildbutton("💎 ʀᴇᴘᴏ 💎", "https://github.com/damiandharsa/priiiiyo-mirror-bot")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     LOGGER.info('UID: {} - UN: {} - MSG: {}'.format(update.message.chat.id, update.message.chat.username, update.message.text))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
